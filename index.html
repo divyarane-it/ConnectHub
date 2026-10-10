@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#087f75">
+    <title>ConnectHub | Your Productivity Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-icon">✦</span>
+            Connect<span>Hub</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">⌂ Home</a>
+            <a href="#contact">✉ Contact</a>
+            <a href="#tasks">☷ Tasks</a>
+        </div>
+
+        <div class="nav-actions">
+            <button type="button" id="themeToggle"
+                    class="theme-btn" aria-label="Switch theme"
+                    title="Switch theme">☾</button>
+            <span class="status-pill">✦ Stay Productive</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow">YOUR SPACE. YOUR PROGRESS.</span>
+            <h1>Connect<span>Hub</span></h1>
+            <h2>Small steps. Big progress.</h2>
+            <p>
+                A simple space to reach out, organize your day,
+                and turn your plans into progress.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="primary-link">✉ Contact Us</a>
+                <a href="#tasks" class="secondary-link">Explore Tasks ↓</a>
+            </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+            <div class="art-circle"></div>
+            <div class="art-card">
+                <div class="art-top">
+                    <span>✦</span> My Productivity
+                </div>
+                <div class="art-check">✓
+                    <span>Plan your goals</span>
+                </div>
+                <div class="art-check">✓
+                    <span>Take small steps</span>
+                </div>
+                <div class="art-check">✓
+                    <span>Celebrate progress</span>
+                </div>
+                <div class="art-progress"><span></span></div>
+                <small>Every step counts!</small>
+            </div>
+            <span class="floating-star star-one">✦</span>
+            <span class="floating-star star-two">✧</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Contact Form -->
+        <section class="card contact-card" id="contact">
+            <div class="section-heading">
+                <div class="heading-icon">✉</div>
+                <div>
+                    <h2>Contact Us</h2>
+                    <p>Have a question? We'd love to hear from you.</p>
+                </div>
+            </div>
+
+            <form id="contactForm">
+                <div class="field">
+                    <label for="name">Full Name <span>*</span></label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name" required
+                           autocomplete="name">
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address <span>*</span></label>
+                    <input type="email" id="email" name="email"
+                           placeholder="you@example.com" required
+                           autocomplete="email">
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="subject">Subject <span>*</span></label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose a subject</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Collaboration">Collaboration</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small class="error" id="subjectError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="message">Your Message <span>*</span></label>
+                    <textarea id="message" name="message" rows="4"
+                              placeholder="Write your message here..."
+                              required></textarea>
+                    <small class="error" id="messageError"></small>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>➤</span> Send Message
+                </button>
+
+                <div id="formMessage" class="form-message"
+                     role="status" aria-live="polite"></div>
+
+                <p class="privacy-note">
+                    🔒 Demo form — messages are not sent or stored.
+                </p>
+            </form>
+        </section>
+
+        <!-- To-Do List -->
+        <section class="card tasks-card" id="tasks">
+            <div class="section-heading">
+                <div class="heading-icon">✓</div>
+                <div>
+                    <h2>My To-Do List</h2>
+                    <p>Plan your day, one task at a time.</p>
+                </div>
+            </div>
+
+            <form id="taskForm" class="task-entry">
+                <input type="text" id="taskInput"
+                       placeholder="Add a new task..."
+                       aria-label="New task" maxlength="120" required>
+                <button type="submit" class="add-btn">＋ Add Task</button>
+            </form>
+
+            <div class="task-toolbar">
+                <span class="task-count" id="taskCounter">0 tasks remaining</span>
+                <button type="button" id="clearCompleted"
+                        class="clear-btn">Clear completed</button>
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">☘</div>
+                <h3>Your day starts here!</h3>
+                <p>Add your first task and make it happen.</p>
+            </div>
+
+            <div class="task-tip">
+                <span>✦</span>
+                Progress, not perfection. Keep going!
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">✦ ConnectHub</div>
+        <p>Built with HTML, CSS & JavaScript</p>
+        <p class="footer-note">A little organization goes a long way. ♡</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
